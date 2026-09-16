@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Thông  tin member";
+    var member = Model as TvcLesson07Models.Models.DataModels.TvcMember;
+}
+
+<div class="alert alert-info">
+    <h1>@ViewData["Title"]</h1>
+    @* <p>Member id: @ViewBag.Member.TvcMemberId</p>
+    <p>UserName: @ViewBag.Member.TvcUserName</p>
+    <p>UserName: @ViewBag.Member.TvcPassword</p>
+    <p>UserName: @ViewBag.Member.TvcFullName</p>
+    <p>UserName: @ViewBag.Member.TvcEmail</p> *@
+
+    <p>Memberid: @member.TvcMemberId</p>
+    <p>UserName: @member.TvcUserName</p>
+    <p>UserName: @member.TvcPassword</p>
+    <p>UserName: @member.TvcFullName</p>
+    <p>UserName: @member.TvcEmail</p>
+</div>
+
