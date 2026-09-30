@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Lesson 12";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5 fw-bold">Lesson 12 - ASP.NET Core + Entity Framework</h1>
+    <p class="lead text-muted">Quản lý thành viên bằng EF Core với SQLite.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">1. Tạo model</h5>
+                <p class="card-text">Mô hình dữ liệu cho thành viên có các trường tên đăng nhập, mật khẩu, họ tên và email.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">2. DbContext</h5>
+                <p class="card-text">Thiết lập DbContext và kết nối SQLite để thao tác dữ liệu dễ dàng.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">3. CRUD</h5>
+                <p class="card-text">Thêm, sửa, xem chi tiết và xóa hồ sơ thành viên trực tiếp trong ứng dụng.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-controller="NMTMember" asp-action="Index" class="btn btn-primary btn-lg">Mở quản lý thành viên</a>
+</div>

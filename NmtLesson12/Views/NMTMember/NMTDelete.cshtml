@@ -1,0 +1,17 @@
+@model TvcLesson12.Models.NMTMember
+
+@{
+    ViewData["Title"] = "Xóa thành viên";
+}
+
+<h2>Xác nhận xóa</h2>
+
+<div class="alert alert-warning">
+    Bạn có chắc chắn muốn xóa thành viên <strong>@Model.NMTFullName</strong> không?
+</div>
+
+<form asp-action="NMTDelete" method="post">
+    <input type="hidden" asp-for="NMTMemberId" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

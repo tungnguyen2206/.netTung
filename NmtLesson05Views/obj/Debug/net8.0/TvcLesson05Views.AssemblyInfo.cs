@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TvcLesson05Views")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49b0f247b7244f11a02840a28f80de38eb14775f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TvcLesson05Views")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TvcLesson05Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
