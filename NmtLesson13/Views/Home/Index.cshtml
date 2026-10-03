@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Lesson 13";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5 fw-bold">Lesson 13 - NMT Management System</h1>
+    <p class="lead text-muted">Quản lý thành viên bằng ASP.NET Core MVC + EF Core + SQLite.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">1. Dashboard</h5>
+                <p class="card-text">Giao diện tổng quan giúp quản lý nhanh các hoạt động của thành viên trong hệ thống.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">2. NMT Member</h5>
+                <p class="card-text">Thêm, sửa, xem chi tiết và xóa thành viên với mô hình dữ liệu rõ ràng và dễ mở rộng.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title">3. CRUD</h5>
+                <p class="card-text">Thao tác dữ liệu từ giao diện web theo đúng quy trình quản lý và lưu trữ SQLite.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5">
+    <a asp-controller="NMTMember" asp-action="Index" class="btn btn-primary btn-lg">Mở quản lý thành viên</a>
+</div>
