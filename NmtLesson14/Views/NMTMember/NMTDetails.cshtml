@@ -1,0 +1,27 @@
+@model NMT.Models.NMTMember
+
+@{
+    ViewData["Title"] = "Chi tiết thành viên";
+}
+
+<h2>Chi tiết thành viên</h2>
+
+<div class="card">
+    <div class="card-body">
+        <dl class="row mb-0">
+            <dt class="col-sm-3">Tên đăng nhập</dt>
+            <dd class="col-sm-9">@Model.NMTUserName</dd>
+
+            <dt class="col-sm-3">Họ và tên</dt>
+            <dd class="col-sm-9">@Model.NMTFullName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.NMTEmail</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-3">
+    <a asp-action="NMTEdit" asp-route-id="@Model.NMTMemberId" class="btn btn-warning text-white">Sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>

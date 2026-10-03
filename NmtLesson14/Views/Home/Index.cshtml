@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Lesson 14";
+}
+
+<div class="text-center mb-4">
+    <h1 class="display-5 fw-bold text-primary">Lesson 14 - Layout, ViewStart và Area</h1>
+    <p class="lead text-muted">Bài thực hành về bố cục giao diện, ViewImports, ViewStart và Area trong ASP.NET Core MVC.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body">
+                <div class="badge bg-primary mb-3">Layout</div>
+                <h5 class="card-title">1. Tệp layout chung</h5>
+                <p class="card-text">Tất cả trang đều phụ thuộc vào một bố cục chung với header, sidebar và footer.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body">
+                <div class="badge bg-success mb-3">ViewStart</div>
+                <h5 class="card-title">2. ViewStart</h5>
+                <p class="card-text">Thiết lập layout mặc định cho toàn bộ view để tiết kiệm thời gian và đồng bộ giao diện.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-4">
+            <div class="card-body">
+                <div class="badge bg-warning text-dark mb-3">Area</div>
+                <h5 class="card-title">3. Area Admin</h5>
+                <p class="card-text">Phân nhóm chức năng thành phần như quản trị, giúp dự án dễ mở rộng và kiểm soát hơn.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 p-4 bg-light rounded-4 border">
+    <h3 class="mb-3">NMT Management Portal</h3>
+    <p class="mb-3">Hệ thống đã được thiết kế với layout riêng, sử dụng ViewImports và ViewStart để quản lý bố cục chung.</p>
+    <div class="d-flex gap-2 flex-wrap">
+        <a asp-controller="NMTMember" asp-action="Index" class="btn btn-primary">Mở quản lý thành viên</a>
+        <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Vào Admin Dashboard</a>
+    </div>
+</div>

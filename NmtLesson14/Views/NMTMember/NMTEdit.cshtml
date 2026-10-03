@@ -1,0 +1,43 @@
+@model NMT.Models.NMTMember
+
+@{
+    ViewData["Title"] = "Sửa thành viên";
+}
+
+<h2>Sửa thông tin thành viên</h2>
+
+<form asp-action="NMTEdit" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="NMTMemberId" />
+
+    <div class="mb-3">
+        <label asp-for="NMTUserName" class="form-label"></label>
+        <input asp-for="NMTUserName" class="form-control" />
+        <span asp-validation-for="NMTUserName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NMTPassword" class="form-label"></label>
+        <input asp-for="NMTPassword" class="form-control" />
+        <span asp-validation-for="NMTPassword" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NMTFullName" class="form-label"></label>
+        <input asp-for="NMTFullName" class="form-control" />
+        <span asp-validation-for="NMTFullName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NMTEmail" class="form-label"></label>
+        <input asp-for="NMTEmail" class="form-control" />
+        <span asp-validation-for="NMTEmail" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
