@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson14\\NMTLesson14.csproj": {}
+    "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson15\\NmtLesson15.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson14\\NMTLesson14.csproj": {
+    "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson15\\NmtLesson15.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson14\\NMTLesson14.csproj",
-        "projectName": "NMTLesson14",
-        "projectPath": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson14\\NMTLesson14.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson15\\NmtLesson15.csproj",
+        "projectName": "NmtLesson15",
+        "projectPath": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson15\\NmtLesson15.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson14\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\visual\\.netTung\\NmtLesson15\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,18 +51,6 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[10.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[10.0.12, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

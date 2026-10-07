@@ -1,0 +1,94 @@
+@model StateDemoViewModel
+@{
+    ViewData["Title"] = "Quản lý trạng thái";
+    var notice = TempData["NmtNotice"] as string;
+}
+
+<section class="intro">
+    <p class="eyebrow">LESSON 15 · ASP.NET CORE MVC</p>
+    <h1>Quản lý trạng thái</h1>
+    <p>HTTP là stateless. Dùng Cookie, Session và TempData để lưu hoặc chuyển dữ liệu phù hợp giữa các request.</p>
+</section>
+
+@if (!string.IsNullOrEmpty(notice))
+{
+    <div class="notice" role="status">@notice</div>
+}
+
+<section class="state-grid" aria-label="Các kỹ thuật quản lý trạng thái">
+    <article class="state-card">
+        <div class="card-heading">
+            <span class="number">01</span>
+            <div>
+                <p class="eyebrow">CLIENT-SIDE STATE</p>
+                <h2>Cookie</h2>
+            </div>
+        </div>
+        <p>Cookie được lưu trên trình duyệt và tự gửi cùng request đến đúng domain. Ví dụ này ghi nhớ lựa chọn giao diện trong 30 ngày.</p>
+        <div class="saved-value">
+            <span>Giá trị đang đọc từ request</span>
+            <strong>@Model.Theme</strong>
+        </div>
+        <form asp-action="SaveTheme" method="post" class="form-stack">
+            <label for="theme">Chọn giao diện</label>
+            <select id="theme" name="theme">
+                <option value="light">Sáng</option>
+                <option value="dark">Tối</option>
+            </select>
+            <button type="submit">Lưu Cookie</button>
+        </form>
+    </article>
+
+    <article class="state-card">
+        <div class="card-heading">
+            <span class="number">02</span>
+            <div>
+                <p class="eyebrow">SERVER-SIDE STATE</p>
+                <h2>Session</h2>
+            </div>
+        </div>
+        <p>Dữ liệu được giữ phía server theo phiên làm việc; trình duyệt chỉ gửi Session ID trong Cookie.</p>
+        <div class="saved-value">
+            <span>Tên trong Session</span>
+            <strong>@(string.IsNullOrEmpty(Model.DisplayName) ? "Chưa lưu" : Model.DisplayName)</strong>
+        </div>
+        <form asp-action="SaveName" method="post" class="form-stack">
+            <label for="displayName">Tên hiển thị (tối đa 60 ký tự)</label>
+            <input id="displayName" name="displayName" value="@Model.DisplayName" maxlength="60" autocomplete="name" />
+            <button type="submit">Lưu vào Session</button>
+        </form>
+        <div class="counter-row">
+            <span>Số lần bấm trong Session: <strong>@Model.Counter</strong></span>
+            <form asp-action="IncrementCounter" method="post">
+                <button class="button-secondary" type="submit">Tăng</button>
+            </form>
+        </div>
+    </article>
+
+    <article class="state-card">
+        <div class="card-heading">
+            <span class="number">03</span>
+            <div>
+                <p class="eyebrow">ONE-TIME MESSAGE</p>
+                <h2>TempData</h2>
+            </div>
+        </div>
+        <p>TempData phù hợp để chuyển thông báo qua một lần redirect (Post/Redirect/Get), sau đó giá trị được đọc sẽ hết hạn.</p>
+        <form asp-action="SendFlashMessage" method="post" class="form-stack">
+            <label for="message">Thông báo flash (tối đa 120 ký tự)</label>
+            <input id="message" name="message" maxlength="120" placeholder="Ví dụ: Đã cập nhật thành công" />
+            <button type="submit">Gửi qua TempData</button>
+        </form>
+    </article>
+</section>
+
+<section class="summary">
+    <div>
+        <p class="eyebrow">GHI NHỚ</p>
+        <h2>Chọn đúng nơi lưu trạng thái</h2>
+        <p>Cookie nằm ở client; Session và TempData được xử lý phía server. Không lưu mật khẩu hay dữ liệu nhạy cảm trong Cookie thông thường.</p>
+    </div>
+    <form asp-action="ClearState" method="post">
+        <button class="button-danger" type="submit">Xóa dữ liệu demo</button>
+    </form>
+</section>
